@@ -19,7 +19,7 @@ jobs:
     - name: print working dir
       run: pwd
     - name: list files in working directory
-      run: ls 
+      run: ls src/APIModel/APIModel
     - name: Restore dependencies
       run: dotnet restore        
     - name: Build
