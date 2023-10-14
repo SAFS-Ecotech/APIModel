@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: list files in working directory
-      run: ls -l
+      run: ls home/runner/work
    
     - uses: actions/checkout@v3
     - name: Setup .NET
