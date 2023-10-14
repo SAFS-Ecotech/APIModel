@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: print working directory
-      run: echo "working directory is $working-directory"
+      run: pwd
    
     - uses: actions/checkout@v3
     - name: Setup .NET
