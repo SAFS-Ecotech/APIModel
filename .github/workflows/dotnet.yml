@@ -18,9 +18,8 @@ jobs:
         dotnet-version: 6.0.x
     - name: print working dir
       run: pwd
-    - name: change the working directory
-      working-directory: ./src/apis/APIModel/APIModel
     - name: list files in working directory
+      working-directory: ./src/apis/APIModel/APIModel
       run: ls
     - name: Restore dependencies
       run: dotnet restore        
