@@ -22,8 +22,11 @@ jobs:
       working-directory: ./src/apis/APIModel/APIModel
       run: ls
     - name: Restore dependencies
+      working-directory: ./src/apis/APIModel/APIModel
       run: dotnet restore        
     - name: Build
+      working-directory: ./src/apis/APIModel/APIModel
       run: dotnet build --no-restore
     - name: Test
+      working-directory: ./test
       run: dotnet test --no-build --verbosity normal
