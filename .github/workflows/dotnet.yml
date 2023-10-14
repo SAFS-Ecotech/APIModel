@@ -28,5 +28,5 @@ jobs:
       working-directory: ./src/apis/APIModel/APIModel
       run: dotnet build --no-restore
     - name: Test
-      working-directory: ./test
+      working-directory: ./test/APIModel.Tests
       run: dotnet test --no-build --verbosity normal
