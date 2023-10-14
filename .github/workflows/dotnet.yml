@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - name: print working dir
+      working-directory: /src/apis/APIModel/APIModel
       run: pwd
     - name: list files in working directory
       run: ls /home/runner/work/APIModel/APIModel
