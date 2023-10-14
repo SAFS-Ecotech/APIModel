@@ -5,7 +5,10 @@ name: .NET
 
 on:
   workflow_dispatch:
-
+env:
+  apidir: ./src/apis/APIModel/APIModel
+  testdir: ./test/APIModel.Tests
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,14 +22,14 @@ jobs:
     - name: print working dir
       run: pwd
     - name: list files in working directory
-      working-directory: ./src/apis/APIModel/APIModel
+      working-directory: ${{env.apidir}}
       run: ls
     - name: Restore dependencies
-      working-directory: ./src/apis/APIModel/APIModel
+      working-directory: ${{env.apidir}}
       run: dotnet restore        
     - name: Build
-      working-directory: ./src/apis/APIModel/APIModel
+      working-directory: ${{env.apidir}}
       run: dotnet build --no-restore
     - name: Test
-      working-directory: ./test/APIModel.Tests
+      working-directory: ${{env.testdir}}
       run: dotnet test --no-build --verbosity normal
