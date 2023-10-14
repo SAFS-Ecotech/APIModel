@@ -14,7 +14,7 @@ jobs:
     - name: print working dir
       run: pwd
     - name: list files in working directory
-      run: ls /home/runner/work
+      run: ls /home/runner/work/APIModel/APIModel
    
     - uses: actions/checkout@v3
     - name: Setup .NET
